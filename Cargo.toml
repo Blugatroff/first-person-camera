@@ -1,0 +1,8 @@
+[package]
+name = "first-person-camera"
+version = "0.1.0"
+authors = ["jasper"]
+edition = "2018"
+
+[dependencies.cgmath]
+version = "^0.18.0"
