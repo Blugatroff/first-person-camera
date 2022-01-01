@@ -86,4 +86,9 @@ impl FirstPersonCamera {
     pub const fn pitch(&self) -> f32 {
         self.pitch
     }
+    pub fn transform(&self) -> cgmath::Matrix4<f32> {
+        cgmath::Matrix4::from_translation(self.position)
+            * cgmath::Matrix4::from_angle_y(cgmath::Rad(self.yaw))
+            * cgmath::Matrix4::from_angle_x(cgmath::Rad(-self.pitch))
+    }
 }
